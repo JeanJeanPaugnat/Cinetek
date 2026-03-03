@@ -1,0 +1,44 @@
+/*ROOT*/
+
+:root{
+
+    /*couleurs*/
+    --clr-background: var(--color-main-back);
+    --clr-background-second: var(--color-header-back);
+    --clr-background-third: var(--color-dark-black);
+    --clr-forground: var(--color-main-front);
+
+    /*back*/
+    --color-main-back: #15151e;
+    --color-header-back: #1f1f28;
+    --color-dark-black: #04040f;
+
+    /*front*/
+    --color-main-front: #f8f8f8;
+    --color-main-second: #eeeeee;
+    --color-main-third: #e4e3e3;
+
+    /*general*/
+    --color-red: #d92e41;
+    --color-grey: #3d3d46;
+    --color-violet: #5e3e91;
+    --color-greish: #00b3ae;
+    --color-yellow: #ffff99;
+
+    /*fonts*/
+    --font-heading: 'Oswald';
+    --font-main: 'Roboto';
+
+}
+
+
+/*CLASS pre-used*/
+
+.titleBigBold{
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+
+

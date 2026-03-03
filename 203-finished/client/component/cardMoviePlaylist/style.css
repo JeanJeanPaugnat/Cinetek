@@ -1,0 +1,31 @@
+.cardOneMovieplaylist{
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 0.195rem white;
+    color: white;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    align-items: center;
+}
+
+.movieDivPlaylist{
+    display: flex;
+    flex-direction: row;
+}
+
+.part1{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.part2{
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+}
+
+.part3{
+    display: flex;
+    flex-direction: column;
+}

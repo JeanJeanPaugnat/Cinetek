@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(2, 9, 24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: Helvetica;
+    font-size: 2rem;
+}
+
+html{
+    height: 100%;
+}
+
+
+.containerlien{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    text-decoration: none;
+
+    a{
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    a:hover{
+        color: rgb(2, 9, 24);
+    }
+
+    p{
+        font-size: 1.5rem;
+        padding: 0.6rem 1rem;
+        border: solid 0.4rem aliceblue;
+        border-radius: 1rem;
+        text-decoration: none;
+        background-color: rgba(240, 248, 255, 0.336);
+    }
+    p:hover{
+        background-color: rgba(240, 248, 255, 0.788);
+        color: rgb(2, 9, 24);
+
+    }
+    h5{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+}

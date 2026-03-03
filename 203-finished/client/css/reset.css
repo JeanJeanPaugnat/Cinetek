@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+body{
+  font-family: var(--font-main);
+}
+
+option {
+  border: 0;
+  outline: 0;
+}
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* Elements spécifiques */
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: none; /* Supprime les bordures */
+  outline: none; /* Supprime l'effet d'outline */
+  font-family: inherit; /* Hérite de la police de caractères parente */
+  font-size: inherit; /* Hérite de la taille de police parente */
+  vertical-align: middle;
+}
+
+/* Styles supplémentaires pour les éléments de formulaire */
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: bottom;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none; /* Supprime les bordures */
+  outline: none; /* Supprime l'effet d'outline */
+  background: none; /* Supprime l'arrière-plan par défaut */
+  cursor: pointer; /* Change le curseur pour pointer */
+  font-family: inherit; /* Hérite de la police de caractères parente */
+  font-size: inherit; /* Hérite de la taille de police parente */
+  line-height: normal; /* Réinitialise la hauteur de ligne */
+}
+
+/* Réinitialisation de la liste */
+ul,
+ol,
+li, 
+a {
+  list-style: none; /* Supprime les puces ou les numéros de liste */
+  text-decoration: none;
+  color: var(--clr-forground);
+}
+
+

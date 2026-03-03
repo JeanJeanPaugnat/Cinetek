@@ -1,0 +1,188 @@
+.containerTrailer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.positionRelative{
+    position: relative;
+    width: 88%;
+    aspect-ratio: 16/6;
+    margin-bottom: 4rem;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    pointer-events: none; 
+}
+
+.croixMenu{
+    position: absolute;
+    right: 6rem;
+    font-size: 7rem;
+    color: var(--color-red);
+}
+
+
+.croixMenu:hover{
+    color: var(--clr-forground);
+}
+
+.contentPlaylist{
+    color: white;
+    position: absolute;
+    left: 2rem;
+    bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.titleFilmTrailer{
+    font-size: 4rem;
+    font-weight: bolder;
+
+}
+
+.playlistPlayPart{
+    font-size: 1.3rem;
+}
+
+.containerAllInfoPlay{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.objetIframeTrailer{
+    width: 100%;
+    height: 100%;
+}
+
+.titleFilmTrailer{
+    margin-bottom: 1.5rem;
+}
+
+.contentNote{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentComment{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#comment{
+    background-color: var(--clr-background-second);
+    border: solid 0.2rem var(--clr-forground);
+    border-radius: 1.2rem 1.2rem 0 1.2rem;
+    padding: 0.85rem;
+    width: 80%;
+    color: var(--clr-forground);
+}
+
+#comment::placeholder{
+    font-family: var(--font-main);
+    color: var(--clr-forground);
+    font-weight: 200;
+}
+
+.buttonComment{
+    margin: 1rem 0;
+    font-size: 1rem;
+    padding: 0.35rem 0.7rem;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    border-radius: 0.2rem;
+    font-weight: 400;
+    color: var(--color-yellow);
+    border: solid 0.15rem var(--color-yellow);
+}
+
+.titleNiv2{
+    color: var(--clr-forground);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+
+    span{
+        color: var(--color-red);
+        margin-right: 0.5rem;
+    }
+}
+
+#notation{
+    font-size: 3.5rem;
+    color: var(--color-yellow);
+    background-color: transparent;
+}
+
+#notation option{
+    background-color: var(--clr-background);
+}
+
+#notation option:checked {
+    color: var(--color-greish);
+    background-color: var(--clr-background);
+}
+
+#notation option:hover {
+    color: var(--color-greish);
+    background-color: var(--clr-background);
+}
+
+.titleNiv3{
+    color: var(--clr-forground);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+    border-left: solid 0.4rem var(--color-red);
+}
+
+.Container2Playlist{
+    display: flex;
+    width: 88%;
+    justify-content: space-between;
+}
+
+.containerCommentsTrailer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.cardComment{
+    color: var(--clr-forground);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.nameComent{
+    font-size: 1.5rem;
+    color: var(--clr-forground);
+}
+
+.dateComent{
+    font-size: 0.9rem;
+    color: var(--color-red);
+}

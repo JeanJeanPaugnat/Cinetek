@@ -1,0 +1,29 @@
+
+    <div class="cardOneMovieplaylist" onclick=" requestTrailer('{{id_movies}}'), openPopup()">
+        <div class="part1">
+            <h1 class="">Titre</h1>
+            <h1 class="titleFilmplaylist">
+            {{titre}}
+            </h1>
+        </div>
+        <div class="part2">
+            <p>Réalisateur</p>
+            <p class="realisateurFilmplaylist">
+            {{realisateur}}
+            </p>
+        </div>
+        <div class="part3">
+            <p>Année de sortie</p>
+            <p class="yearFilmplaylist">
+            {{release_year}}
+            </p>
+        </div>    
+        <p class="moyenneFilmplaylist">{{moyenneMovie}}/5★</p>
+    </div> 
+
+
+<div onclick="removefromplaylist('{{id_movies}}'), requestMovieByProfil()">
+        <svg width="18" height="3" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 1H1" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+</div>

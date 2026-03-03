@@ -1,0 +1,59 @@
+<div class="containerTrailer">
+    <div class="positionRelative">
+        
+        <iframe id="videoFrame" class="objetIframeTrailer" src="{{url_film_trailer}}?autoplay=1&controls=0&showinfo=0" frameborder="0"  allowfullscreen></iframe>
+        <div class="overlay"></div>
+        <div class="contentPlaylist">
+            <h1 class="titleFilmTrailer">
+                {{titre}}
+            </h1>
+            <div class="containerAllInfoPlay">
+                <div class="playlistPlayPart">
+
+                <p>2h03</p>
+            </div>
+            <div class="playlistPlayPart">
+
+                <p>2014</p>
+            </div>
+            <div class="playlistPlayPart">
+
+                <p>United States</p>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="Container2Playlist">
+        <div class="contentNote">
+            <h3 class="titleNiv2">
+            <span>1</span>Donnez une note
+            </h3>
+            <select name="notation" id="notation" onchange="requestNotation('{{id_movies}}')">
+                <option value="0">☆☆☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="4">★★★★☆</option>
+                <option value="5">★★★★★</option>
+            </select>
+        </div>
+        <div class="contentComment">
+            <h3 class="titleNiv2">
+                <span>2</span>Laissez un commentaire
+            </h3>
+            <textarea name="comment" id="comment" cols="30" rows="10" wrap="hard" placeholder="Laissez votre commentaires"></textarea>
+            <button class="buttonComment" onclick="requestSendComment('{{id_movies}}')">Envoyez mon commentaire</button>
+
+            <h4 class="titleNiv3">
+                Les ressentis
+            </h4>
+            <div class="containerCommentsTrailer">
+                {{comments}}
+            </div>
+        </div>
+            
+    </div>
+    
+</div>

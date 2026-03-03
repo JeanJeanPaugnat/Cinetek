@@ -1,0 +1,50 @@
+<div class="cardOneMovie" >
+    
+    
+
+    <div class="containerInfomovie">
+        <h1 class="titleFilmmovie" onclick=" requestTrailer('{{id_movies}}'), openPopup()">
+            {{titre}}
+        </h1>
+
+        <div class="contentmovie">
+            <p class="realisateurFilmmovie">
+            {{realisateur}}
+            </p>
+
+            <p class="yearFilmmovie">
+            {{release_year}}
+            </p>
+
+            <p class="moyennemovie">{{moyenneMovie}}/5★</p>
+
+            <div class="registrePlaylist" onclick="requestaddplaylist('{{id_movies}}')">
+                <svg class="crossSvg" width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 1V7M7 7V13M7 7H13M7 7L1 7" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Enregistrez dans votre playlist</p>
+            </div>
+
+        </div>
+           
+    </div>
+    
+    
+
+        <div class="containerImgmovie" onclick=" requestTrailer('{{id_movies}}'), openPopup()">
+        <div class="div1img">
+            <img class="imgFilm" src="{{url_film_img}}" alt="img du film">
+        </div>
+        <div class="div2img">
+            <img class="imgFilm" src="{{url_film_img}}" alt="img du film">
+        </div>
+        <div class="div3img">
+            <img class="imgFilm" src="{{url_film_img}}" alt="img du film">
+        </div>
+        <div class="div4img">
+            <img class="imgFilm" src="{{url_film_img}}" alt="img du film">
+        </div>
+    </div>
+    
+    
+</div>  
