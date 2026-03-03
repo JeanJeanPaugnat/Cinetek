@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <title>SAE 203</title>
+  </head>
+  <body>
+    <section id="mainApp">
+      <!-- contenu statique -->
+      <div class="header">
+        <h1 class="titleheader titleBigBold">Les Films</h1>
+
+        <div class="contentHeader">
+          <button class="btn_classic" onclick="requestMovie()">ALL</button>
+
+          <!-- contenu dynamique -->
+          <select
+            class="categorie"
+            name="categorie"
+            id="categorie"
+            onchange="requestMovieByCategorie()"
+          >
+           
+          </select>
+
+          <!-- contenu dynamique -->
+          <select class="profil" name="profil" id="profil"></select>
+          <button class="btn_classic" onclick="requestMovieByProfil()">
+            Playlist
+          </button>
+        </div>
+      </div>
+
+      <h2 class="titleReco">Recommandation</h2>
+      <!-- contenu dynamique -->
+      <div class="carousel" data-carousel>
+
+        <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+        <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+        
+        <div class="recoContainer" data-slides>
+        
+        </div>
+        
+      </div>
+      <h2 class="titleFilms">Tout les films</h2>
+      <input type="text" onkeydown="rechercheFilm()" id="rechercheInput" placeholder="Recherche de film">
+
+      <!-- contenu dynamique -->
+      <div class="mainContainer">
+
+      </div>
+
+      <h2 class="titlePlaylist">Ma Playlist</h2>
+      <!-- contenu dynamique -->
+      <div class="playlistContainer">
+
+      </div>
+    </section>
+    
+    <script type="module">
+      // on importe le composant Movie
+      import { Movie } from "./component/cardMovie/script.js";
+      // on permet à Movie d'être accessible globalement (notamment par main.js)
+      window.Movie = Movie;
+
+      import { cardTrailerMovie } from "./component/cardTrailerMovie/script.js";
+      window.cardTrailerMovie = cardTrailerMovie;
+
+      import { optionProfile } from "./component/optionProfile/script.js";
+      window.optionProfile = optionProfile;
+
+      import { optionCategorie } from "./component/optionCategorie/script.js";
+      window.optionCategorie = optionCategorie;
+
+      import { MoviePlay } from "./component/cardMoviePlaylist/script.js";
+      window.MoviePlay = MoviePlay;
+
+      import { MovieReco } from "./component/cardMovieReco/script.js";
+      window.MovieReco = MovieReco;
+
+      import { Entitycommentaire } from "./component/commentaire/script.js";
+      window.Entitycommentaire = Entitycommentaire;
+
+      requestProfiles();
+      requestCategories();
+      requestMovie();
+      requestMovieReco();
+    </script>
+    <script src="./carousel.js" defer></script>
+    <script src="./main.js"></script>
+
+
+  </body>
+</html>

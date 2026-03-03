@@ -1,0 +1,19 @@
+<div class="containerTrailer">
+    <h1 class="titleFilm">
+        {{titre}}
+    </h1>
+    <iframe class="objetIframe" src="{{url_film_trailer}}" allowfullscreen=""></iframe>
+    <select name="notation" id="notation" onchange="requestNotation('{{id_movies}}')">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <textarea name="comment" id="comment" cols="30" rows="10" wrap="hard" placeholder="Laissez votre commentaires"></textarea>
+    <button onclick="requestSendComment('{{id_movies}}')">Envoyez mon commentaire</button>
+
+    <div class="containerComments">
+        {{comments}}
+    </div>
+</div>

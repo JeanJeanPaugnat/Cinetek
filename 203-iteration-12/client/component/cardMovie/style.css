@@ -1,0 +1,50 @@
+.cardOneMovie{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border: solid black 0.05rem;
+    border-radius: 1.8rem;
+    font-size: 1rem;
+    padding: 1rem;
+    transition: ease-in-out 0.3s;
+    background-color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cardOneMovie:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.containerInfo{
+    max-width: 20rem;
+    margin-top: 0.2rem;
+}
+
+.containerImg{
+    width: 20rem;
+    aspect-ratio: 3 / 4;
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+.containerImg img{
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.2rem;
+}
+
+.crossSvg:hover{
+    background-color: aqua;
+}
+
+.titleFilm{
+    margin-top: 0.85rem;
+    margin-bottom: 1rem;
+    height: 4rem;
+}
+

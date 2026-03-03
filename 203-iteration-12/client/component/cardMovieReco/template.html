@@ -1,0 +1,36 @@
+<div class="cardmoviereco slide" >
+
+    <img class="imgBack" src="{{url_film_img}}" alt="Nature Image #3">
+
+    
+
+    <div class="contentReco">
+
+      <div class="containerImgReco" onclick=" requestTrailer('{{id_movies}}')">
+        <img class="imgFilm" src="{{url_film_img}}" alt="">
+      </div>
+
+      <div class="containerInfoReco">
+
+        <h1 class="titleInfoReco">{{titre}}</h1>
+
+        <div class="infoAdd">
+          <p class="realisateurInfo">{{realisateur}}</p>
+
+          <p class="yearInfo">{{release_year}}</p>
+        </div>
+          
+
+          <p class="moyenneInfo">{{moyenneMovie}}/5★</p>
+
+          <div class="containerSvg" onclick="requestaddplaylist('{{id_movies}}')">
+            <svg class="crossSvgInfo" width="28" height="28" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 1V7M7 7V13M7 7H13M7 7L1 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>

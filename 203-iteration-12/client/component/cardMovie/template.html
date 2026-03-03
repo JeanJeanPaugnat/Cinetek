@@ -1,0 +1,31 @@
+<div class="cardOneMovie" >
+    
+    <div class="containerImg" onclick=" requestTrailer('{{id_movies}}')">
+        <img class="imgFilm" src="{{url_film_img}}" alt="img du film">
+    </div>
+
+    <div class="containerInfo">
+        <h1 class="titleFilm">
+        {{titre}}
+        </h1>
+
+        <div class="content">
+            <p class="realisateurFilm">
+            {{realisateur}}
+            </p>
+
+            <p class="yearFilm">
+            {{release_year}}
+            </p>
+        </div>
+        
+        
+            
+    </div>
+    <div onclick="requestaddplaylist('{{id_movies}}')">
+        <svg class="crossSvg" width="18" height="18" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 1V7M7 7V13M7 7H13M7 7L1 7" stroke="#1B1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+    <p>{{moyenneMovie}}/5</p>
+</div>  

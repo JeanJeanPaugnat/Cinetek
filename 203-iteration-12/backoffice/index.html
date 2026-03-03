@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>BackofficeSAE203</title>
+</head>
+<body>
+    <nav> 
+        <h1>BACK OFFICE</h1>
+    </nav>
+    <section>
+
+        
+        
+        <form method='GET' action="../server/script.php">
+           
+            <h3>Mettre à jour ou ajouter un film</h3>
+       
+            <input type="text" name="titre" placeholder="Saisir le titre">
+            <input type="text" name="realisateur" placeholder="Saisir le realisateur">
+            <input type="text" name="sortieAnnee" placeholder="Saisir l'annee de sortie">
+            <input type="text" name="urlImg" placeholder="Saisir un url d'image">
+            <input type="text" name="urlTrailer" placeholder="Saisir un url trailer">
+            <select class="recommandation" name="recommandation" id="recommandation">
+                <option value="1">Mettre en avant le film</option>
+                <option value="0">Ne pas mettre en avant le film</option>
+            </select>
+            <!-- contenu dynamique -->
+            <select class="categorie" name="categorie" id="categorie">
+
+            </select>
+            
+            <input type="submit" value="addmovie" name="action">
+
+        </form>
+
+        <form method='GET' action="../server/script.php">
+
+            <h3>Ajouter un profil utilisateur</h3>
+
+            <input type="text" name="name" placeholder="Saisir nom de l'utilisateur">
+
+            <input type="submit" value="addprofile" name="action">
+
+        </form>
+
+        <form method='GET' action="../server/script.php">
+
+            <h3>Supprimer un profil utilisateur</h3>
+
+            <!-- contenu dynamique -->
+            <select class="profil" name="profil" id="profil">
+                
+            </select>
+
+            <button type="submit" value="deleteprofile" onclick="deleteprofile()" name="action">deleteprofile</button>
+
+        </form>
+
+        <form method='GET' action="../server/script.php">
+
+            <h3>Ajouter un film aux Recommandations</h3>
+
+            <!-- contenu dynamique -->
+            <select class="filmNonReco" name="filmNonReco" id="filmNonReco">
+                
+            </select>
+
+            <button value="addfilmreco" onclick="addfilmreco()" name="action">add film reco</button>
+        </form>
+        <form method='GET' action="../server/script.php">
+            <h3>Supprimer un film des Recommandations</h3>
+
+            <!-- contenu dynamique -->
+            <select class="filmOuiReco" name="filmOuiReco" id="filmOuiReco">
+                
+            </select>
+
+            <button value="deletefilmreco" onclick="deletefilmreco()"  name="action">delete film reco</button>
+        </form>
+        <form method='GET' action="../server/script.php">
+            <h3>Supprimer les notes d'un film</h3>
+
+            <!-- contenu dynamique -->
+            <select class="Film" name="Film" id="Film">
+                
+            </select>
+
+            <button value="deletefilmnote" onclick="deletefilmnote()"  name="action">delete film note</button>
+        </form>
+        <form method='GET' action="../server/script.php">
+            <h3>Valider un commentaire</h3>
+
+            <!-- contenu dynamique -->
+            <select class="CommentValid" name="CommentValid" id="CommentValid">
+                
+            </select>
+
+            <button value="validationfilmcomment" onclick="validationfilmcomment()"  name="action">valide commentaire</button>
+        </form>
+        <form method='GET' action="../server/script.php">
+            <h3>Supprimer un commentaire</h3>
+
+            <!-- contenu dynamique -->
+            <select class="Comment" name="Comment" id="Comment">
+                
+            </select>
+
+            <button value="deletefilmcomment" onclick="deletefilmcomment()"  name="action">delete commentaire</button>
+        </form>
+        
+        
+
+    </section>
+    <script type="module">
+        import {optionProfile} from './component/optionProfile/script.js';
+        window.optionProfile = optionProfile;
+
+        import {optionCategorie} from './component/optionCategorie/script.js';
+        window.optionCategorie = optionCategorie;
+
+        import {optionFilmNonReco} from './component/optionFilmNonReco/script.js';
+        window.optionFilmNonReco = optionFilmNonReco;
+
+        import {optionFilmReco} from './component/optionFilmReco/script.js';
+        window.optionFilmReco = optionFilmReco;
+
+        import {optionFilm} from './component/optionFilm/script.js';
+        window.optionFilm = optionFilm;
+
+        import {optionComment} from './component/optionComment/script.js';
+        window.optionComment = optionComment;
+
+        import {optionValidComment} from './component/optionValidComment/script.js';
+        window.optionValidComment = optionValidComment;
+
+        requestFilm();
+        requestProfiles();
+        requestCategories();
+        requestFilmReco();
+        requestFilmNonReco();
+        requestCommentaire();
+        requestValidCommentaire();
+    </script>
+    <script src="script.js"></script>
+
+
+
+    
+</body>
+</html>

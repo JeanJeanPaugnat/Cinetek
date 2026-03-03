@@ -1,0 +1,88 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.contentHeader{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+
+.categorie{
+    font-family: var(--font-main);
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    background-color: white;
+    border: solid black 0.05rem;
+    transition: ease-in-out 0.1s;
+}
+
+.categorie:focus{
+    border-radius: 2rem 2rem 0rem 0rem;
+}
+
+.profil{
+    font-family: var(--font-main);
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    background-color: white;
+    border: solid black 0.05rem;
+    transition: ease-in-out 0.1s;
+}
+
+.profil:focus{
+    border-radius: 2rem 2rem 0rem 0rem;
+}
+
+
+.btn_classic{
+    background-color: white;
+    border: solid black 0.05rem;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    transition: ease-in-out 0.3s;
+}
+
+.btn_classic:hover{
+    background-color: black;
+    border: solid black 0.05rem;
+    padding: 1rem 3rem;
+    color: white;
+    
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.playlistContainer{
+    background-color: rgba(0, 0, 0, 0.329);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.recoContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
