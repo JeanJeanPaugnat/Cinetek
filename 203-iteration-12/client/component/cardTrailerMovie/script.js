@@ -5,7 +5,7 @@ let template = await loadTemplate('./component/cardTrailerMovie/template.html');
 let cardTrailerMovie = {}; 
 
 cardTrailerMovie.commentaire = async function(idmovie){
-    let response = await fetch("../server/script.php?action=getcomment&idmovies=" + idmovie);
+    let response = await fetch("https://mmi.unilim.fr/~paugnat7/server/script.php?action=getcomment&idmovies=" + idmovie);
     let datacomment = await response.json();
     let commentaire = await Entitycommentaire.render(datacomment);
     return commentaire;
