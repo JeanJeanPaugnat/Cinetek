@@ -1,6 +1,10 @@
+
 <?php
-
-
+// Headers CORS et JSON
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header('Content-Type: application/json; charset=utf-8');
 
 
 
@@ -170,8 +174,10 @@ function addCommentaire($idprofile, $valeurComment, $idmovie, $formatDate){
 
 function getCommentaire($idmovie){
     $cnx = new PDO("mysql:host=localhost;dbname=paugnat7", "paugnat7", "paugnat7");
-    $answer = $cnx->query("SELECT COMMENTAIRES.*, PROFILS.nom, NOTATION.note AS moyenne_notation FROM COMMENTAIRES JOIN PROFILS ON COMMENTAIRES.id_profils = PROFILS.id_profils LEFT JOIN NOTATION ON COMMENTAIRES.id_movies = NOTATION.id_movies AND COMMENTAIRES.id_profils = NOTATION.id_profils WHERE COMMENTAIRES.id_movies = '$idmovie' AND COMMENTAIRES.etat = 'validé' GROUP BY COMMENTAIRES.id_commentaires"); 
+    $sql = "SELECT COMMENTAIRES.*, PROFILS.nom, NOTATION.note AS moyenne_notation FROM COMMENTAIRES JOIN PROFILS ON COMMENTAIRES.id_profils = PROFILS.id_profils LEFT JOIN NOTATION ON COMMENTAIRES.id_movies = NOTATION.id_movies AND COMMENTAIRES.id_profils = NOTATION.id_profils WHERE COMMENTAIRES.id_movies = '$idmovie' AND COMMENTAIRES.etat = 'validé' GROUP BY COMMENTAIRES.id_commentaires";
+    $answer = $cnx->query($sql);
     $res = $answer->fetchAll(PDO::FETCH_OBJ);
+    // var_dump('result:', $res);
     return $res;
 }
 

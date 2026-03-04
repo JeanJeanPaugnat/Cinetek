@@ -1,4 +1,13 @@
+
+
 <?php
+// Headers CORS et JSON
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+if (isset($_REQUEST['action']) && strpos($_REQUEST['action'], 'get') === 0) {
+  header('Content-Type: application/json; charset=utf-8');
+}
 
 require("model.php");
 
