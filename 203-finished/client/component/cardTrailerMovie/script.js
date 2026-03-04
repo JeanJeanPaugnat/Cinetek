@@ -5,7 +5,7 @@ let template = await loadTemplate('./component/cardTrailerMovie/template.html');
 let cardTrailerMovie = {}; 
 
 cardTrailerMovie.commentaire = async function(idmovie){
-    let response = await fetch("../server/script.php?action=getcomment&idmovies=" + idmovie);
+    let response = await fetch("https://mmi.unilim.fr/~paugnat7/server/script.php?action=getcomment&idmovies=" + idmovie);
     let datacomment = await response.json();
     let commentaire = await Entitycommentaire.render(datacomment);
     return commentaire;
@@ -25,7 +25,7 @@ cardTrailerMovie.format = async function(obj) {
 }
 
 cardTrailerMovie.render = async function(selector, data){
-    let html = '<a class="croixMenu" href="https://paugnat-sae203.mmi-limoges.fr/client/"><p>x</p><a>';
+    let html = '<a class="croixMenu" href="#"><p>x</p><a>';
     for(let obj of data){
         html += await cardTrailerMovie.format(obj);
     }
